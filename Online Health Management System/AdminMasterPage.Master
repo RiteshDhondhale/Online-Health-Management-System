@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="Online_Health_Management_System.AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styles/Site.css" rel="stylesheet" />
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.js"></script>
+    <script src="js/cufon-yui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/Chaparral_Pro.font.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery-func.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
+    <style type="text/css">
+        .auto-style1 {
+            color: #000099;
+        }
+
+        .auto-style2 {
+            font-size: large;
+            display: block;
+            text-align: right;
+            color: White;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server"></asp:UpdatePanel>
+        <div id="header">
+            <div class="shell">
+                <h1 id="logo"><a href="AdminHome.aspx"><span>Online Appointment Management System</span></a></h1>
+                <div class="auto-style2">
+                    <span class="auto-style1"><strong>Welcome:<asp:Label ID="Label1" runat="server" Text="Guest"></asp:Label></strong></span> &nbsp;<strong><asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CssClass="auto-style1">Login</asp:LinkButton></strong><span class="autostyle1"><strong>&nbsp;</strong></span>
+                </div>
+            </div>
+        </div>
+        <div id="navigation">
+            <div class="shell">
+                <ul>
+                    <li><a class="active" href="AdminHome.aspx">HOME</a></li>
+                    <li><a href="AdminAddDept.aspx">Add Department</a></li>
+                    <li><a href="AdminAddDoctor.aspx">Add Doctor </a></li>
+                    <li><a href="Appointmentlist.aspx">Appointment List</a></li>
+                    <li><a href="AdminDepartment.aspx">Department List</a></li>
+                    <li><a href="AdminDoctorlist.aspx">Doctor list</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="featured">
+            <center>
+                <%--<img src="Images/a5.jpg" height="250px" width="700px" alt="" />--%>
+            </center>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="footer">
+            <center>
+                <font size="4">Design &amp; Developed by : <b><i> Khushi Saini </i></b>
+                    <br /> 
+                    Uploaded on: <b><i>Feb 2020</i></b>
+                    <br />
+                </font>
+            </center>
+        </div>
+        <script type="text/javascript">pageLoaded();</script>
+    </form>
+</body>
+</html>
